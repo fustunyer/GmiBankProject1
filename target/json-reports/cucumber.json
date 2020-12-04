@@ -1,0 +1,56 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-04T01:29:05.143Z",
+        "line": 3,
+        "name": "User go to GmiBank home page",
+        "description": "",
+        "id": "go-to-home-page;user-go-to-gmibank-home-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 26438000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user go to \"http://www.gmibank.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.gmibank.com/\"",
+                  "offset": 11
+                }
+              ],
+              "location": "gmibank.stepdefinitions.GmibankStepDefinitions.user_go_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@gmibankhomepage"
+          }
+        ]
+      }
+    ],
+    "name": "Go To Home Page",
+    "description": "",
+    "id": "go-to-home-page",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/GmiBank.feature",
+    "tags": [
+      {
+        "name": "@gmibankhomepage",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
