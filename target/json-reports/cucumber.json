@@ -3,48 +3,72 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-12-04T01:29:05.143Z",
-        "line": 3,
-        "name": "User go to GmiBank home page",
+        "start_timestamp": "2020-12-09T21:35:18.415Z",
+        "line": 4,
+        "name": "Read and validate all customer data",
         "description": "",
-        "id": "go-to-home-page;user-go-to-gmibank-home-page",
+        "id": "gmi-bank-all-customer-info;read-and-validate-all-customer-data",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 26438000000,
+              "duration": 9575000000,
               "status": "passed"
             },
-            "line": 4,
-            "name": "user go to \"http://www.gmibank.com/\"",
+            "line": 5,
+            "name": "user read all customer and sets response using to api end point \"https://www.gmibank.com/api/tp-customers\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"http://www.gmibank.com/\"",
-                  "offset": 11
+                  "val": "\"https://www.gmibank.com/api/tp-customers\"",
+                  "offset": 64
                 }
               ],
-              "location": "gmibank.stepdefinitions.GmibankStepDefinitions.user_go_to(java.lang.String)"
+              "location": "gmibank.stepdefinitions.CustomerApiStepDef.user_read_all_customer_and_sets_response_using_to_api_end_point(java.lang.String)"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1187000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user deserialization customer data json to java pojo",
+            "match": {
+              "location": "gmibank.stepdefinitions.CustomerApiStepDef.user_deserialization_customer_data_json_to_java_pojo()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user validates all data",
+            "match": {
+              "location": "gmibank.stepdefinitions.CustomerApiStepDef.user_validates_all_data()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@gmibankhomepage"
+            "name": "@AllCustomerApi"
           }
         ]
       }
     ],
-    "name": "Go To Home Page",
+    "name": "Gmi Bank All Customer Info",
     "description": "",
-    "id": "go-to-home-page",
+    "id": "gmi-bank-all-customer-info",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/GmiBank.feature",
+    "uri": "file:src/test/resources/features/api.feature",
     "tags": [
       {
-        "name": "@gmibankhomepage",
+        "name": "@AllCustomerApi",
         "type": "Tag",
         "location": {
           "line": 1,
