@@ -8,18 +8,18 @@ import gmibank.utilities.ReadTxt;
 import gmibank.utilities.WriteToTxt;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.response.Response.*;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
@@ -37,39 +37,38 @@ public class CustomerApiStepDef {
                              ContentType.JSON,
                             "Accept",
                             ContentType.JSON)
-                .when()
+                            .when()
                             .get(api_endpoint)
-                .then()
+                            .then()
                             .contentType(ContentType.JSON)
                             .statusCode(200)
                             .extract()
                             .response();
-        //response.prettyPrint();
+       // response.prettyPrint();
 
         }
-    List<String> expectedSsn=new ArrayList<>();
+    List<String> allSsn=new ArrayList<>();
     @Given("user deserialization customer data json to java pojo")
     public void user_deserialization_customer_data_json_to_java_pojo() throws Exception {
         ObjectMapper objectMapper=new ObjectMapper();
         customers=objectMapper.readValue(response.asString(),Customer[].class);
         for (int i=0; i< customers.length;i++) {
-            expectedSsn.add(customers[i].getSsn());
+            allSsn.add(customers[i].getSsn());
         }
-        System.out.println("************************");
-        /*for (int i=0;i<customers.length;i++) {
-            if (customers[i].getUser()!=null) {
-                System.out.println(customers[i].getUser().getLastName());
-            }
-        }*/
-        WriteToTxt.saveDataInFile("Ssnfile5.txt",customers);
-        List<String > allCustomer=ReadTxt.returnCustomerSNNList("Ssnfile5.txt");
-        Assert.assertEquals("not verified",expectedSsn,allCustomer);
+        System.out.println(allSsn);
+
+        WriteToTxt.saveDataInFile("allCustomerSsn1.txt",customers);
+        List<String> customerSNNList=ReadTxt.returnCustomerSNNList("allCustomerSsn1.txt");
+
+        Assert.assertEquals("not verify",allSsn,customerSNNList);
 
     }
 
     @Then("user validates all data")
     public void user_validates_all_data() throws Exception {
 
-        }
+
+    }
+
 
 }

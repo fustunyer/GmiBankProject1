@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.612">
-<testcase classname="Gmi Bank All Customer Info" name="Read and validate all customer data" time="5.117">
-<system-out><![CDATA[Given user read all customer and sets response using to api end point "https://www.gmibank.com/api/tp-customers".passed
-And user deserialization customer data json to java pojo....................passed
-Then user validates all data................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="17.57">
+<testcase classname="Read countries" name="create a country" time="10.91">
+<system-out><![CDATA[Given user sets the response using api end point "https://www.gmibank.com/api/tp-countries" and creates country using "name" and "France".passed
+]]></system-out>
+</testcase>
+<testcase classname="Read countries" name="read all countries" time="0.008">
+<system-out><![CDATA[Given user sets the countries to response using "https://www.gmibank.com/api/tp-countries".passed
+And user saves the countries to correspondent files.........................passed
+Then user validates the countries...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Read countries" name="delete countries" time="5.482">
+<system-out><![CDATA[Given user deletes a country using endpoint "https://www.gmibank.com/api/tp-countries" and its extension "/57080".passed
 ]]></system-out>
 </testcase>
 </testsuite>

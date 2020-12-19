@@ -52,11 +52,11 @@ public class WriteToTxt {
 
             for (int i =0; i<customers.length;i++){
 
-                writer.append(customers[i].getFirstName()+" , "+customers[i].getLastName()+"\n"+customers[i].getCity()+" , "+customers[i].getAddress()+"\n");
+                writer.append(customers[i].getFirstName()+" , "+customers[i].getLastName()+","+customers[i].getCity()+" , "+customers[i].getAddress());
                 if(customers[i].getUser() != null)
                 writer.append(customers[i].getUser().getFirstName());
                 if(customers[i].getCountry() != null)
-                writer.append(customers[i].getCountry().getName());
+                writer.append(customers[i].getCountry().getName()+"\n");
 
             }
 

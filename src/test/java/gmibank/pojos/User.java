@@ -1,7 +1,7 @@
 package gmibank.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+//10 gece basliyoruz
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
     private int id;

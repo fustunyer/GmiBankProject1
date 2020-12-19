@@ -1,0 +1,20 @@
+US11 , Team13,NewCity , sdf
+US11001customer , team15,fairfax , 071 Barry Hills, Prohaskachester, WV 59360
+USAFrederick , Williamson,St Louis , I live in St louis MO
+Reanna , Grady,St Louis , I live in St louis MO
+Ally , Wlley,zxczc , 49 Elly
+Allyjack , dsfdf,55443 , 45534
+ResitAndrew , Kozey,St Louis , I live in St louis MO
+Mariana , Tillman,St Louis , I live in St louis MO
+Ali , Deckow,St Louis , I live in St louis MO
+Pehlivan , Yenilmez,fghj , Test mahallesi Test caddesi Test sokak no:5
+PehlivanScotlandUs , 0113,77443 , 77434
+Jacqueline , Emmerich,Jeanberg , Apt. 461 644 Hyatt Lane, Schowalterborough, KS 67042-7080
+Wendell , Trantow,Greenholttown , Apt. 391 572 Rodrick Mountains, Port Myungfurt, KY 22925-3615
+Alda , Monahan,St Louis , I live in St louis MO
+Ariel , Lockman,St Louis , I live in St louis MO
+Robert , Sabin,Sakarya , izmir buca
+ISLANDEverette , Dietrich,St Louis , I live in St louis MO
+angelina , ma,22443 , 22534
+alina , m1,22443 , 22534
+deniz , mavi,canakkale , incirli

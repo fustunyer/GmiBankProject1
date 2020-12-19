@@ -3,71 +3,155 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-12-19T16:56:52.390Z",
-        "line": 4,
-        "name": "Read and validate all customer data",
+        "start_timestamp": "2020-12-19T21:50:20.948Z",
+        "line": 8,
+        "name": "create a country",
         "description": "",
-        "id": "gmi-bank-all-customer-info;read-and-validate-all-customer-data",
+        "id": "read-countries;create-a-country;create-country;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10510000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user sets the response using api end point \"https://www.gmibank.com/api/tp-countries\" and creates country using \"name\" and \"France\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.gmibank.com/api/tp-countries\"",
+                  "offset": 43
+                },
+                {
+                  "val": "\"name\"",
+                  "offset": 112
+                },
+                {
+                  "val": "\"France\"",
+                  "offset": 123
+                }
+              ],
+              "location": "gmibank.stepdefinitions.CountryApiStepDef.user_sets_the_response_using_api_end_point_and_creates_country_using_and(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CountryReader"
+          },
+          {
+            "name": "@CreateCountry"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-19T21:50:31.901Z",
+        "line": 9,
+        "name": "read all countries",
+        "description": "",
+        "id": "read-countries;read-all-countries",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4550000000,
+              "duration": 2000000,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user read all customer and sets response using to api end point \"https://www.gmibank.com/api/tp-customers\"",
+            "line": 10,
+            "name": "user sets the countries to response using \"https://www.gmibank.com/api/tp-countries\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"https://www.gmibank.com/api/tp-customers\"",
-                  "offset": 64
+                  "val": "\"https://www.gmibank.com/api/tp-countries\"",
+                  "offset": 42
                 }
               ],
-              "location": "gmibank.stepdefinitions.CustomerApiStepDef.user_read_all_customer_and_sets_response_using_to_api_end_point(java.lang.String)"
+              "location": "gmibank.stepdefinitions.CountryApiStepDef.user_sets_the_countries_to_response_using(java.lang.String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 397000000,
+              "duration": 1000000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user deserialization customer data json to java pojo",
+            "line": 11,
+            "name": "user saves the countries to correspondent files",
             "match": {
-              "location": "gmibank.stepdefinitions.CustomerApiStepDef.user_deserialization_customer_data_json_to_java_pojo()"
+              "location": "gmibank.stepdefinitions.CountryApiStepDef.user_saves_the_countries_to_correspondent_files()"
             },
             "keyword": "And "
           },
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user validates all data",
+            "line": 12,
+            "name": "user validates the countries",
             "match": {
-              "location": "gmibank.stepdefinitions.CustomerApiStepDef.user_validates_all_data()"
+              "location": "gmibank.stepdefinitions.CountryApiStepDef.user_validates_the_countries()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@AllCustomerApi"
+            "name": "@CountryReader"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-19T21:50:31.940Z",
+        "line": 17,
+        "name": "delete countries",
+        "description": "",
+        "id": "read-countries;delete-countries;multiple-countries;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5465000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user deletes a country using endpoint \"https://www.gmibank.com/api/tp-countries\" and its extension \"/57080\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.gmibank.com/api/tp-countries\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"/57080\"",
+                  "offset": 99
+                }
+              ],
+              "location": "gmibank.stepdefinitions.CountryApiStepDef.user_deletes_a_country_using_endpoint_and_its_extension(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CountryReader"
           }
         ]
       }
     ],
-    "name": "Gmi Bank All Customer Info",
+    "name": "Read countries",
     "description": "",
-    "id": "gmi-bank-all-customer-info",
+    "id": "read-countries",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/api.feature",
+    "uri": "file:src/test/resources/features/apicountries.feature",
     "tags": [
       {
-        "name": "@AllCustomerApi",
+        "name": "@CountryReader",
         "type": "Tag",
         "location": {
           "line": 1,
