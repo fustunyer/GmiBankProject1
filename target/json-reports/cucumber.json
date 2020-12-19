@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-12-09T21:35:18.415Z",
+        "start_timestamp": "2020-12-19T16:56:52.390Z",
         "line": 4,
         "name": "Read and validate all customer data",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9575000000,
+              "duration": 4550000000,
               "status": "passed"
             },
             "line": 5,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 1187000000,
+              "duration": 397000000,
               "status": "passed"
             },
             "line": 6,
@@ -43,7 +43,6 @@
           },
           {
             "result": {
-              "duration": 5000000,
               "status": "passed"
             },
             "line": 7,

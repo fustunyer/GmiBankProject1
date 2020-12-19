@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.261">
-<testcase classname="Gmi Bank All Customer Info" name="Read and validate all customer data" time="11.088">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.612">
+<testcase classname="Gmi Bank All Customer Info" name="Read and validate all customer data" time="5.117">
 <system-out><![CDATA[Given user read all customer and sets response using to api end point "https://www.gmibank.com/api/tp-customers".passed
 And user deserialization customer data json to java pojo....................passed
 Then user validates all data................................................passed

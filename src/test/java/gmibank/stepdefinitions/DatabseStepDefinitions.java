@@ -12,7 +12,7 @@ public class DatabseStepDefinitions {
         DatabaseUtility.createConnection();
 
         String query = "SELECT * FROM public.tp_customer";
-       // List<Object> list = DatabaseUtility.getColumnData(query, "ID");
+        List<Object> list = DatabaseUtility.getColumnData(query, "ID");
         List<String> list2=DatabaseUtility.getColumnNames(query);
 
         for(String w : list2){
